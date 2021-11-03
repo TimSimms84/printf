@@ -24,5 +24,3 @@ int print_string(va_list s);
 int print_int(va_list i);
 
 #endif /* _MAIN_H_ */
-
-
