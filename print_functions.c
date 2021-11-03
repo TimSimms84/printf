@@ -57,10 +57,6 @@ int print_string(va_list s)
 {
 	int length;
 	char *str = va_arg(s, char *);
-	char *strd = malloc(sizeof(int));
-
-	strd[0] = 5;
-	free(strd);
 
 	if (str == NULL)
 		str = "(null)";
