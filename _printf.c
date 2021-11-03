@@ -56,8 +56,8 @@ int _printf(const char *format, ...)
 	{
 		_putchar('%');
 		i += 2;
+		length = length + 1;
 	}
-/* add else statement to finish off if 2 % */
 	else
 	{
 		f = specifiercheck(&format[i + 1]);
@@ -66,11 +66,11 @@ int _printf(const char *format, ...)
 	_putchar(format[i]);
 	_putchar(format[i + 1]);
 	i += 2;
+	length = length + 2;
 	}
 	else
 	{
-	f(ap);
-	i += 2;
+	length = length + f(ap), i += 2;
 	}
 	}
 	}
