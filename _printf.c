@@ -18,8 +18,7 @@ int (*specifiercheck(const char *format))(va_list)
 		{NULL, NULL}
 	};
 	if (!format)
-		exit(99)
-			
+		exit(99);
 	for (i = 0; p[i].spec != NULL; i++)
 	{
 		if (*(p[i].spec) == *format)
