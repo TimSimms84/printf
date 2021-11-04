@@ -47,33 +47,32 @@ int _printf(const char *format, ...)
 	{
 		for (; format[i] != '%' && format[i]; i++)
 		{
-			_putchar(format[i]);
-			length++;
+			_putchar(format[i]), length++;
 		}
 		if (!format[i])
 			return (length);
 	if (format[i + 1] == '%')
 	{
 		_putchar('%');
-		i += 2;
-		length = length + 1;
+		i += 2,	length = length + 1;
+	}
+	else if (format[i + 1] == '\0')
+	{
+		i++;
+		continue;
 	}
 	else
 	{
 		f = specifiercheck(&format[i + 1]);
 	if (f == NULL)
 	{
-	_putchar(format[i]);
-	_putchar(format[i + 1]);
-	i += 2;
-	length = length + 2;
+	_putchar(format[i]), _putchar(format[i + 1]);
+	i += 2,	length = length + 2;
 	}
 	else
 	{
 	length = length + f(ap), i += 2;
-	}
-	}
-	}
+	}}}
 va_end(ap);
 return (length);
 }
