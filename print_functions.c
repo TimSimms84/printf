@@ -35,7 +35,7 @@ int print_int(va_list i)
 }
 
 /**
- * print_char - prints a character
+ * print_char - prints a character with _putchar to stdout.
  * @c: character to print
  *
  * Return: always 1
@@ -43,6 +43,9 @@ int print_int(va_list i)
 
 int print_char(va_list c)
 {
+	/* protect against null character */
+	if (!c)
+		exit(1);
 	_putchar((char)va_arg(c, int));
 	return (1);
 }
