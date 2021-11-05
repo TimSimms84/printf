@@ -43,6 +43,15 @@ Specify the data type of the variable that its going to be printed with a preced
 .sp
 .B % 
 - Will print a %  to the stdout.
+.sp
+.SH Examples
+.sp
+.B Usage examples:
+.sp
+printf("This is a simple string printed to standard output.")
+.sp
+.I Produces:
+This is a simple string printed to standard output.
 .SH NOTES
 _printf depends of system call write() which is implemented through a custom function called _putchar. 
 .sp
