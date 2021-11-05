@@ -17,6 +17,7 @@ int (*specifiercheck(const char *format))(va_list)
 		{"d", print_int},
 		{NULL, NULL}
 	};
+	/* protect against null format specifier */
 	if (!format)
 		exit(99);
 	for (i = 0; p[i].spec != NULL; i++)
@@ -30,8 +31,8 @@ int (*specifiercheck(const char *format))(va_list)
 }
 
 /**
- * _printf - prints anything
- * @format: list of argument types passed to the function
+ * _printf - prints anything in string format
+ * @format: list of argument types formatted in a string
  *
  * Return: number of characters printed
  */
