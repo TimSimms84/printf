@@ -52,6 +52,11 @@ printf("This is a simple string printed to standard output.")
 .sp
 .I Produces:
 This is a simple string printed to standard output.
+.sp
+printf("This is a formatted char: %c", 'K')
+.sp
+.I Produces:
+This is a formatted char: K
 .SH NOTES
 _printf depends of system call write() which is implemented through a custom function called _putchar. 
 .sp
