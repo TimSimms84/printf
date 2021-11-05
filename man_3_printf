@@ -48,15 +48,20 @@ Specify the data type of the variable that its going to be printed with a preced
 .sp
 .B Usage examples:
 .sp
-printf("This is a simple string printed to standard output.")
+_printf("This is a simple string printed to standard output.")
 .sp
 .I Produces:
 This is a simple string printed to standard output.
 .sp
-printf("This is a formatted char: %c", 'K')
+_printf("This is a formatted char: %c", 'K')
 .sp
 .I Produces:
 This is a formatted char: K
+.sp
+_printf("This is a formatted string %s. Followed by a char %c, and two ints %d, %i.", "I am the string", 'A', 2, 27)
+.sp
+.I Produces:
+This is a formatted string I am the string. Followed by a char A, and two ints 2, 27.
 .SH NOTES
 _printf depends of system call write() which is implemented through a custom function called _putchar. 
 .sp
